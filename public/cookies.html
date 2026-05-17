@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cookies Policy - MovoraStar</title>
+<meta name="description" content="Cookies Policy for MovoraStar. Learn about how we use cookies, local storage, and similar tracking technologies on our streaming gateway.">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/components/navbar.css">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#080c14;--navy:#0d1117;--card:#111926;--border:#1e2d40;--gold:#f5c518;--gold2:#d4af37;--text:#e8edf5;--text2:#8899b4;--radius:16px;--shadow:0 8px 32px rgba(0,0,0,0.4)}
+html{font-size:16px;scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text2);min-height:100vh;display:flex;flex-direction:column;align-items:center;-webkit-font-smoothing:antialiased;line-height:1.8;overflow-x:hidden;padding-top:90px}
+a{color:var(--gold);text-decoration:none;transition:color 0.2s}
+a:hover{color:#fff}
+.page{flex:1;width:100%;max-width:900px;margin:0 auto;padding:48px 30px}
+.page h1{font-size:clamp(24px,3vw,34px);font-weight:800;color:var(--text);margin-bottom:6px;padding-bottom:16px;border-bottom:2px solid var(--gold)}
+.page .meta{font-size:13px;color:#4a5a70;margin-bottom:36px;margin-top:4px}
+.section{margin-bottom:45px}
+.section h2{font-size:17px;font-weight:700;color:var(--gold);margin-bottom:10px;display:flex;align-items:center;gap:10px}
+.section h2 .dot{width:8px;height:8px;border-radius:50%;background:var(--gold);flex-shrink:0}
+.section h3{font-size:14px;font-weight:600;color:var(--text);margin:16px 0 8px}
+.section p{color:var(--text2);line-height:1.9;margin-bottom:8px}
+.section ul{padding-left:20px;margin:8px 0 12px}
+.section ul li{color:var(--text2);line-height:1.9;margin-bottom:4px}
+.section strong{color:var(--text)}
+.highlight-box{border-left:3px solid rgba(245,197,24,0.3);padding:14px 20px;background:rgba(245,197,24,0.03);border-radius:0 8px 8px 0;margin-bottom:20px;font-size:14px;color:var(--text2);line-height:1.7}
+table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+table th,table td{border:1px solid var(--border);padding:10px 14px;text-align:left;color:var(--text2)}
+table th{background:rgba(245,197,24,0.05);color:var(--gold);font-weight:600}
+footer{margin-top:48px;background:var(--navy);border-top:1px solid rgba(245,197,24,0.08);padding:40px 0 0;position:relative}
+footer::before{content:'';position:absolute;top:-1px;left:10%;right:10%;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:0.3}
+.footer-grid{max-width:none;padding:0 clamp(24px,6vw,100px);margin:0 auto;display:grid;grid-template-columns:1fr 1fr 1fr;gap:32px;align-items:start}
+.footer-col{display:flex;flex-direction:column;gap:10px}
+.footer-label{font-size:10px;text-transform:uppercase;letter-spacing:1.2px;color:#4a5a70;font-weight:600;margin-bottom:2px}
+.footer-logo{font-size:18px;font-weight:800}
+.footer-logo .star{color:var(--gold);display:inline-block;transition:transform 0.35s ease,text-shadow 0.35s ease}
+.footer-logo:hover .star{transform:scale(1.25);text-shadow:0 0 14px rgba(245,197,24,0.5)}
+.footer-tagline{font-size:13px;color:var(--text2);line-height:1.6}
+.footer-links{display:flex;flex-direction:column;gap:5px}
+.footer-links a{font-size:13px;color:#4a5a70;transition:color 0.25s;width:fit-content}
+.footer-links a:hover{color:var(--gold)}
+.footer-version{font-size:10px;color:#333;letter-spacing:0.5px;margin-left:6px}
+.footer-credit{font-size:14px;color:#888;letter-spacing:0.5px;line-height:1.8}
+.footer-credit a{color:var(--gold);text-decoration:none;transition:all 0.3s ease;font-weight:700}
+.footer-credit a:hover{text-shadow:0 0 10px rgba(245,197,36,0.4),0 0 24px rgba(245,197,36,0.15)}
+.footer-credit .role{font-size:12px;color:#5a6a80;font-weight:400;display:block;margin-top:2px;letter-spacing:0.3px;text-transform:uppercase}
+.footer-divider{border:none;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.06),transparent);margin:32px auto 0;max-width:none}
+.footer-bottom{padding:20px 0;text-align:center}
+.footer-copy{font-size:12px;color:#4a5a70;line-height:1.6;letter-spacing:0.3px}
+@media(min-width:769px){
+.footer-links{flex-direction:row;flex-wrap:wrap;gap:0}
+.footer-links a::after{content:'/';color:#3a4a5a;margin:0 8px;pointer-events:none}
+.footer-links a:last-child::after{display:none}
+}
+@media(max-width:768px){
+.footer-grid{grid-template-columns:1fr;gap:24px;text-align:center}
+.footer-col{align-items:center}
+.footer-links a{width:auto}
+}
+@media(max-width:640px){.page{padding:32px 20px}table{font-size:12px}table th,table td{padding:6px 8px}}
+</style>
+</head>
+<body>
+
+<div id="navbar-container"></div>
+<script>try{var x=new XMLHttpRequest();x.open('GET','/components/navbar.html',false);x.send();if(x.status==200)document.getElementById('navbar-container').innerHTML=x.responseText}catch(e){}</script>
+<main class="page">
+<h1>Cookies Policy</h1>
+<p class="meta">Last updated: May 2026</p>
+
+<div class="section">
+<h2><span class="dot"></span> 1. Introduction</h2>
+<p>This Cookies Policy explains what cookies, local storage, and similar tracking technologies are, how MovoraStar ("we," "us," or "our") uses them on our Website (movorastar.live), and your choices regarding their use.</p>
+<p>By using our Website, you consent to the use of cookies and similar technologies as described in this policy.</p>
+</div>
+
+<div class="section">
+<h2><span class="dot"></span> 2. What Are Cookies?</h2>
+<p>Cookies are small text files that are stored on your device (computer, tablet, or mobile) when you visit a website. They are widely used to make websites work more efficiently, enhance user experience, and provide information to website owners. Cookies can be "persistent" (remaining on your device for a set period) or "session" (deleted when you close your browser).</p>
+</div>
+
+<div class="section">
+<h2><span class="dot"></span> 3. How We Use Cookies and Local Storage</h2>
+<p>MovoraStar uses cookies and browser local storage for the following purposes:</p>
+
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Purpose</th>
+<th>Duration</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Essential / Functional</strong></td>
+<td>Store user preferences such as language selection, streaming source preference, and auto-play toggle settings. These are necessary for the Website to function as intended.</td>
+<td>Persistent (until cleared)</td>
+</tr>
+<tr>
+<td><strong>Legal Compliance</strong></td>
+<td>Store your acknowledgment of our disclaimer to prevent repeated display of the legal notice modal.</td>
+<td>Persistent (until cleared)</td>
+</tr>
+<tr>
+<td><strong>Analytics</strong></td>
+<td>Collect anonymized data about how visitors interact with the Website, including pages visited, time spent, and browser information. We use this data to improve our service.</td>
+<td>Session / Persistent (third-party controlled)</td>
+</tr>
+<tr>
+<td><strong>Third-Party Embedded Content</strong></td>
+<td>Embedded video players may set their own cookies for playback functionality, advertising, and analytics. These are outside our control.</td>
+<td>Varies (third-party controlled)</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="section">
+<h2><span class="dot"></span> 4. Local Storage vs. Cookies</h2>
+<p>In addition to cookies, we use the browser's <strong>LocalStorage</strong> API to store user preferences. Unlike cookies, LocalStorage data:</p>
+<ul>
+<li>Is stored entirely on your device and is never transmitted to our servers</li>
+<li>Does not expire automatically (persists until you clear it manually)</li>
+<li>Has a larger storage capacity than cookies</li>
+<li>Cannot be accessed by third parties through our implementation</li>
+</ul>
+<p>LocalStorage is used for storing your language preference, disclaimer acceptance status, preferred streaming source, and auto-play toggle state.</p>
+</div>
+
+<div class="section">
+<h2><span class="dot"></span> 5. Third-Party Cookies</h2>
+<p>When you access embedded content from third-party streaming providers through our Website, those third parties may place their own cookies on your device. These third-party cookies are governed by the respective third party's privacy and cookies policies.</p>
+<p><strong>MovoraStar does not control</strong> the cookies set by third-party services and is not responsible for their use. We recommend reviewing the cookies policies of any third-party service accessed through our Website.</p>
+</div>
+
+<div class="section">
+<h2><span class="dot"></span> 6. Analytics</h2>
+<p>We may use third-party analytics services (such as Google Analytics) to collect and analyze anonymous information about how visitors use our Website. These analytics providers may use cookies and similar technologies to collect data such as:</p>
+<ul>
+<li>Pages visited and the time spent on each page</li>
+<li>The website you came from (referring URL)</li>
+<li>Your browser type, device type, and operating system</li>
+<li>General geographic location (country/city level, not precise location)</li>
+<li>Your IP address (anonymized where possible)</li>
+</ul>
+<p>This data is aggregated and anonymized. It is used solely to help us understand usage patterns and improve our Website.</p>
+</div>
+
+<div class="section">
+<h2><span class="dot"></span> 7. Your Choices and Control</h2>
+<p>You have several options to control cookies and local storage:</p>
+
+<h3>Browser Settings</h3>
+<p>Most web browsers allow you to control cookies through their settings. You can:</p>
+<ul>
+<li>Block all cookies</li>
+<li>Delete existing cookies</li>
+<li>Set preferences for specific websites</li>
+<li>Enable "Do Not Track" signals</li>
+</ul>
+<p>Please refer to your browser's help documentation for specific instructions.</p>
+
+<h3>Clearing Local Storage</h3>
+<p>You can clear LocalStorage data through your browser's developer tools or privacy settings. Note that clearing this data may reset your preferences (language, disclaimer acceptance, etc.).</p>
+
+<h3>Opting Out of Analytics</h3>
+<p>You can opt out of Google Analytics by installing the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">Google Analytics Opt-out Browser Add-on</a>.</p>
+</div>
+
+<div class="section">
+<h2><span class="dot"></span> 8. Managing Cookies by Browser</h2>
+<p>For more information about managing cookies for your specific browser, visit the following resources:</p>
+<ul>
+<li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener noreferrer">Google Chrome</a></li>
+<li><a href="https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences" target="_blank" rel="noopener noreferrer">Mozilla Firefox</a></li>
+<li><a href="https://support.apple.com/guide/safari/manage-cookies-and-website-data-sfri11471/mac" target="_blank" rel="noopener noreferrer">Safari</a></li>
+<li><a href="https://support.microsoft.com/en-us/microsoft-edge/delete-cookies-in-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09" target="_blank" rel="noopener noreferrer">Microsoft Edge</a></li>
+</ul>
+</div>
+
+<div class="section">
+<h2><span class="dot"></span> 9. Do Not Track Signals</h2>
+<p>Your browser may allow you to transmit a "Do Not Track" (DNT) signal to websites you visit. Our Website does not currently respond to DNT signals due to the lack of a uniform standard for interpreting such signals. However, we do not engage in cross-site tracking of your browsing activity.</p>
+</div>
+
+<div class="section">
+<h2><span class="dot"></span> 10. Updates to This Policy</h2>
+<p>We may update this Cookies Policy from time to time to reflect changes in technology, regulation, or our practices. Changes will be posted on this page with an updated "Last updated" date. We encourage you to review this policy periodically.</p>
+</div>
+
+<div class="section">
+<h2><span class="dot"></span> 11. Contact Us</h2>
+<p>If you have any questions, concerns, or requests regarding this Cookies Policy, please contact us:</p>
+<p><strong>Email:</strong> contact@movorastar.live</p>
+</div>
+</main>
+
+<footer>
+<div class="footer-grid">
+<div class="footer-col">
+<p class="footer-label">Brand</p>
+<div class="footer-logo"><span class="star">★</span> MovoraStar</div>
+<p class="footer-tagline">Your cinematic streaming gateway</p>
+</div>
+<div class="footer-col">
+<p class="footer-label">Links</p>
+<div class="footer-links">
+<a href="/privacy">Privacy Policy</a>
+<a href="/terms">Terms of Use</a>
+<a href="/disclaimer">Disclaimer</a>
+<a href="/dmca">DMCA Policy</a>
+<a href="/cookies">Cookies Policy</a>
+</div>
+</div>
+<div class="footer-col">
+<p class="footer-label">Creator</p>
+<p class="footer-credit">Founded &amp; developed by<br><a href="/about">MOHAMED SAMI</a><span class="role">Founder &amp; Developer</span></p>
+</div>
+</div>
+<hr class="footer-divider">
+<div class="footer-bottom">
+<p class="footer-copy">&copy; <script>document.write(new Date().getFullYear())</script> MovoraStar. All rights reserved.</p><span class="footer-version">v1.0.0</span>
+</div>
+</footer>
+
+<script src="/js/i18n.js"></script>
+<script src="/components/navbar.js"></script>
+</body>
+</html>

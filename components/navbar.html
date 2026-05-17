@@ -1,0 +1,42 @@
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar" id="navbar">
+<div class="container">
+<div class="nav-left">
+<div class="nav-logo" onclick="var p=location.pathname;if(p==='/'||p==='/home'){location.reload()}else{location.href='/';window.scrollTo(0,0)}" style="cursor:pointer"><span class="star">★</span><span class="nav-logo-text"> MovoraStar</span></div>
+</div>
+<div class="nav-center">
+<a href="/" class="nav-link" data-i18n="home">Home</a>
+</div>
+<div class="nav-right">
+<div class="nav-status-wrap">
+<span class="nav-status dot"></span>
+<div class="tooltip">
+<div class="tt-title">All Systems Operational</div>
+<div class="tt-sub">Last checked: Just now</div>
+</div>
+</div>
+<div class="nav-lang" id="navLang">
+<button class="nav-lang-btn" onclick="toggleLangDropdown()" id="langToggleBtn">
+<span id="langLabel">EN</span><span class="arrow">▼</span>
+</button>
+<div class="nav-lang-drop" id="langDropdown">
+<button class="nav-lang-opt active" data-lang="en" onclick="switchLang('en')">EN</button>
+<button class="nav-lang-opt" data-lang="ar" onclick="switchLang('ar')">AR</button>
+</div>
+</div>
+<button class="nav-cta" onclick="var el=document.getElementById('movieId');if(el)el.focus();" data-i18n="watchNow">▶ Watch Now</button>
+<button class="nav-hamburger" id="hamburgerBtn" onclick="toggleMobileMenu()" aria-label="Menu">☰</button>
+</div>
+</div>
+</nav>
+
+<!-- ===== MOBILE MENU ===== -->
+<div class="mobile-menu" id="mobileMenu">
+<button class="mobile-close" onclick="toggleMobileMenu()">✕</button>
+<a href="/" class="nav-link" data-i18n="home" onclick="window.location.href='/';toggleMobileMenu()">Home</a>
+<div class="lang-toggle" id="mobileLangToggle">
+<button class="lang-opt active" data-lang="en" onclick="if(I18N){I18N.toggle('en')};toggleMobileMenu()">EN</button>
+<button class="lang-opt" data-lang="ar" onclick="if(I18N){I18N.toggle('ar')};toggleMobileMenu()">AR</button>
+</div>
+<button class="nav-cta" onclick="var el=document.getElementById('movieId');if(el)el.focus();toggleMobileMenu()" data-i18n="watchNow">▶ Watch Now</button>
+</div>

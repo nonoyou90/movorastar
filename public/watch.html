@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Watch - MovoraStar</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#080c14;--text:#e8edf5;--text2:#8899b4;--gold:#f5c518}
+html{font-size:16px}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;display:flex;flex-direction:column;-webkit-font-smoothing:antialiased}
+a{color:var(--gold);text-decoration:none}
+.navbar{background:rgba(13,17,23,0.85);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.06);position:sticky;top:0;z-index:50;padding:0 24px;height:60px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{font-size:20px;font-weight:800;color:var(--text)}
+.nav-logo .star{color:var(--gold)}
+.player-wrap{flex:1;display:flex;flex-direction:column;max-width:1000px;width:100%;margin:0 auto;padding:24px}
+.player-frame{position:relative;width:100%;aspect-ratio:16/9;background:#000;border-radius:16px;overflow:hidden;box-shadow:0 8px 40px rgba(0,0,0,0.5)}
+.player-frame iframe{width:100%;height:100%;border:none}
+.player-info{padding:16px 0;text-align:center}
+.player-info h1{font-size:18px;font-weight:700;margin-bottom:4px}
+.player-info p{font-size:13px;color:var(--text2)}
+.back-link{display:inline-flex;align-items:center;gap:6px;margin-top:12px;padding:8px 20px;border:1px solid rgba(245,197,24,0.2);border-radius:50px;font-size:13px;font-weight:600;color:var(--gold);transition:all 0.25s}
+.back-link:hover{border-color:var(--gold);background:rgba(245,197,24,0.05)}
+.redirect-screen{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:var(--bg);z-index:9999}
+.redirect-screen p{font-size:16px;color:var(--text2);animation:pulse 1.5s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
+.hidden{display:none}
+@media(max-width:640px){.player-wrap{padding:12px}.player-frame{border-radius:10px}}
+</style>
+</head>
+<body>
+
+<div class="redirect-screen" id="redirectScreen">
+<p>⏳ Redirecting...</p>
+</div>
+
+<nav class="navbar hidden" id="navbar">
+<a href="/" class="nav-logo"><span class="star">★</span> MovoraStar</a>
+<a href="/" class="back-link">← Home</a>
+</nav>
+
+<main class="player-wrap hidden" id="playerWrap">
+<div class="player-info">
+<h1 id="playerTitle">Loading...</h1>
+<p id="playerMeta"></p>
+</div>
+<div class="player-frame">
+<iframe id="playerIframe" src="" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>
+</div>
+<a href="/" class="back-link">← Back to Home</a>
+</main>
+
+<script>
+// ===== CONSENT CHECK (30-day validity) =====
+(function() {
+  var CONSENT_KEY = 'movorastar_consent';
+  var CONSENT_DURATION = 30 * 24 * 60 * 60 * 1000;
+
+  function isConsentValid() {
+    try {
+      var raw = localStorage.getItem(CONSENT_KEY);
+      if (!raw) return false;
+      var data = JSON.parse(raw);
+      if (data && data.t === true && data.ts) {
+        return (Date.now() - data.ts) < CONSENT_DURATION;
+      }
+      if (raw === 'true') {
+        localStorage.setItem(CONSENT_KEY, JSON.stringify({t: true, ts: Date.now()}));
+        return true;
+      }
+    } catch(e) {}
+    return false;
+  }
+
+  if (!isConsentValid()) {
+    // No valid consent — redirect to home
+    window.location.replace('/');
+    return;
+  }
+
+  // Consent valid — show page
+  document.getElementById('redirectScreen').classList.add('hidden');
+  document.getElementById('navbar').classList.remove('hidden');
+  document.getElementById('playerWrap').classList.remove('hidden');
+
+  // Parse ID from URL
+  var params = new URLSearchParams(window.location.search);
+  var id = params.get('id') || '';
+  if (!id) {
+    document.getElementById('playerTitle').textContent = 'No ID provided';
+    document.getElementById('playerMeta').textContent = 'Please go back and enter a content ID.';
+    return;
+  }
+
+  document.getElementById('playerTitle').textContent = 'Now Playing: ' + id;
+  document.getElementById('playerMeta').textContent = 'Streaming from third-party source';
+
+  // Build embed URL
+  var isImdb = /^tt\d{7,8}$/i.test(id);
+  var isNum = /^\d+$/.test(id);
+
+  if (isImdb || isNum) {
+    document.getElementById('playerIframe').src = 'https://vidsrc-embed.ru/embed/movie/' + id;
+  } else {
+    document.getElementById('playerTitle').textContent = 'Invalid ID';
+    document.getElementById('playerMeta').textContent = 'The provided ID does not match expected formats.';
+  }
+})();
+</script>
+</body>
+</html>

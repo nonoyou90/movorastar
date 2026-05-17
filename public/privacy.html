@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy - MovoraStar</title>
+<meta name="description" content="Privacy Policy for MovoraStar. Learn how we handle your data, local storage preferences, and third-party content.">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/components/navbar.css">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#080c14;--navy:#0d1117;--card:#111926;--border:#1e2d40;--gold:#f5c518;--gold2:#d4af37;--text:#e8edf5;--text2:#8899b4;--radius:16px;--shadow:0 8px 32px rgba(0,0,0,0.4)}
+html{font-size:16px;scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text2);min-height:100vh;display:flex;flex-direction:column;align-items:center;-webkit-font-smoothing:antialiased;line-height:1.8;overflow-x:hidden;padding-top:90px}
+a{color:var(--gold);text-decoration:none;transition:color 0.2s}
+a:hover{color:#fff}
+.container{max-width:800px;width:100%;padding:0 24px;margin:0 auto}
+.nav-logo{color:var(--text)}
+.legal-wrapper{max-width:950px;margin:60px auto;padding:60px;background:rgba(13,17,23,0.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.04);border-radius:20px;box-shadow:0 16px 64px rgba(0,0,0,0.5)}
+.page{flex:1;background:#060a12}
+.page h1{font-size:clamp(24px,3vw,34px);font-weight:800;color:var(--text);margin-bottom:6px;padding-bottom:16px;border-bottom:2px solid var(--gold)}
+.page .meta{font-size:13px;color:#4a5a70;margin-bottom:36px;margin-top:4px}
+.section{margin-bottom:48px}
+.section h2{font-size:17px;font-weight:700;color:var(--gold);margin-bottom:10px;display:flex;align-items:center;gap:10px}
+.section h2 .dot{width:8px;height:8px;border-radius:50%;background:var(--gold);flex-shrink:0}
+.section h3{font-size:14px;font-weight:600;color:var(--text);margin:16px 0 8px}
+.section p{color:var(--text2);line-height:1.9;margin-bottom:8px}
+.section ul{padding-left:20px;margin:8px 0 12px}
+.section ul li{color:var(--text2);line-height:1.9;margin-bottom:4px}
+.section strong{color:var(--text)}
+.highlight-box{border-left:3px solid rgba(245,197,24,0.3);padding:14px 20px;background:rgba(245,197,24,0.03);border-radius:0 8px 8px 0;margin-bottom:20px;font-size:14px;color:var(--text2);line-height:1.7}
+footer{margin-top:48px;background:var(--navy);border-top:1px solid rgba(245,197,24,0.08);padding:40px 0 0;position:relative}
+footer::before{content:'';position:absolute;top:-1px;left:10%;right:10%;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:0.3}
+.footer-grid{max-width:none;padding:0 clamp(24px,6vw,100px);margin:0 auto;display:grid;grid-template-columns:1fr 1fr 1fr;gap:32px;align-items:start}
+.footer-col{display:flex;flex-direction:column;gap:10px}
+.footer-label{font-size:10px;text-transform:uppercase;letter-spacing:1.2px;color:#4a5a70;font-weight:600;margin-bottom:2px}
+.footer-logo{font-size:18px;font-weight:800}
+.footer-logo .star{color:var(--gold);display:inline-block;transition:transform 0.35s ease,text-shadow 0.35s ease}
+.footer-logo:hover .star{transform:scale(1.25);text-shadow:0 0 14px rgba(245,197,24,0.5)}
+.footer-tagline{font-size:13px;color:var(--text2);line-height:1.6}
+.footer-links{display:flex;flex-direction:column;gap:5px}
+.footer-links a{font-size:13px;color:#4a5a70;transition:color 0.25s;width:fit-content}
+.footer-links a:hover{color:var(--gold)}
+.footer-version{font-size:10px;color:#333;letter-spacing:0.5px;margin-left:6px}
+.footer-credit{font-size:14px;color:#888;letter-spacing:0.5px;line-height:1.8}
+.footer-credit a{color:var(--gold);text-decoration:none;transition:all 0.3s ease;font-weight:700}
+.footer-credit a:hover{text-shadow:0 0 10px rgba(245,197,36,0.4),0 0 24px rgba(245,197,36,0.15)}
+.footer-credit .role{font-size:12px;color:#5a6a80;font-weight:400;display:block;margin-top:2px;letter-spacing:0.3px;text-transform:uppercase}
+.footer-divider{border:none;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.06),transparent);margin:32px auto 0;max-width:none}
+.footer-bottom{padding:20px 0;text-align:center}
+.footer-copy{font-size:12px;color:#4a5a70;line-height:1.6;letter-spacing:0.3px}
+@media(min-width:769px){
+.footer-links{flex-direction:row;flex-wrap:wrap;gap:0}
+.footer-links a::after{content:'/';color:#3a4a5a;margin:0 8px;pointer-events:none}
+.footer-links a:last-child::after{display:none}
+}
+@media(max-width:768px){
+.footer-grid{grid-template-columns:1fr;gap:24px;text-align:center}
+.footer-col{align-items:center}
+.footer-links a{width:auto}
+}
+@media(max-width:640px){.nav-logo{color:var(--text)}
+.legal-wrapper{padding:32px 20px;margin:24px auto}}
+</style>
+</head>
+<body>
+
+<div id="navbar-container"></div>
+<script>try{var x=new XMLHttpRequest();x.open('GET','/components/navbar.html',false);x.send();if(x.status==200)document.getElementById('navbar-container').innerHTML=x.responseText}catch(e){}</script>
+<main class="page">
+<div class="legal-wrapper">
+<h1>Privacy Policy</h1>
+<p class="meta">Last updated: May 2026</p>
+
+<div class="section">
+<h2><span class="dot"></span> 1. Introduction</h2>
+<p>MovoraStar ("we," "us," or "our") operates the website at movorastar.live (the "Website"). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our Website.</p>
+<p>We are committed to protecting your privacy. Please read this policy carefully. By accessing or using the Website, you acknowledge that you have read, understood, and agree to be bound by this Privacy Policy.</p>
+<div class="highlight-box">If you do not agree with the terms of this Privacy Policy, please do not access the Website.</div>
+</div>
+
+<div class="section">
+<h2><span class="dot"></span> 2. Information We Do NOT Collect</h2>
+<p>MovoraStar does <strong>not</strong> require user registration, account creation, or the submission of personal information to use our service. We do <strong>not</strong> collect, store, or process:</p>
+<ul>
+<li>Names, email addresses, or phone numbers</li>
+<li>Home or business addresses</li>
+<li>Payment or financial information</li>
+<li>Government-issued identification</li>
+<li>Usernames or passwords</li>
+<li>Biometric or genetic data</li>
+</ul>
+</div>
+
+<div class="section">
+<h2><span class="dot"></span> 3. Information We May Collect Automatically</h2>
+<p>When you visit our Website, certain non-personal information may be collected automatically through third-party analytics services (such as Google Analytics). This may include:</p>
+<ul>
+<li>Browser type and version</li>
+<li>Device type and operating system</li>
+<li>Pages visited and time spent on the Website</li>
+<li>Referring URL or exit page</li>
+<li>General geographic location (country or city level only)</li>
+<li>Internet Protocol (IP) address (anonymized where possible)</li>
+</ul>
+<p>This information is aggregated and anonymized. It cannot be used to identify you personally and is used solely to improve the performance and user experience of the Website.</p>
+</div>
+
+<div class="section">
+<h2><span class="dot"></span> 4. Local Storage &amp; Cookies</h2>
+<p>We use <strong>client-side LocalStorage</strong> and similar browser storage mechanisms to maintain user experience preferences. Specifically, we may store:</p>
+<ul>
+<li>Language preference selections</li>
+<li>Legal disclaimer acceptance status</li>
+<li>Preferred streaming source settings</li>
+<li>Auto-play toggle preferences</li>
+</ul>
+<p>This data is stored <strong>entirely on your device</strong> and is never transmitted to our servers. You may clear this data at any time through your browser settings.</p>
+<p>For more details, please see our <a href="/cookies">Cookies Policy</a>.</p>
+</div>
+
+<div class="section">
+<h2><span class="dot"></span> 5. Third-Party Embedded Content</h2>
+<p>Our Website allows users to view media content that is embedded from third-party streaming providers. When you access such embedded content, the third-party provider may set its own cookies, collect data, or track your activity. These third parties have their own privacy policies governing the use of your information.</p>
+<p><strong>MovoraStar does not control, monitor, or assume any responsibility</strong> for the data collection practices of these third-party providers. We encourage you to review the privacy policies of any third-party services accessed through our Website.</p>
+</div>
+
+<div class="section">
+<h2><span class="dot"></span> 6. Third-Party Advertising</h2>
+<p>The embedded third-party players displayed on our Website may include advertisements served by independent ad networks. These ad networks may use cookies, web beacons, or similar technologies to serve personalized advertisements based on your browsing activity.</p>
+<p><strong>MovoraStar has no control over</strong> the advertisements displayed within third-party embedded players and does not share any user data with these ad networks.</p>
+</div>
+
+<div class="section">
+<h2><span class="dot"></span> 7. Analytics</h2>
+<p>We may use third-party analytics services (such as Google Analytics) to collect and analyze anonymous usage data. These services use cookies and similar technologies to help us understand how visitors interact with our Website. The data collected is anonymized and used exclusively for internal improvement purposes.</p>
+</div>
+
+<div class="section">
+<h2><span class="dot"></span> 8. Data Retention</h2>
+<p>Since we do not collect personal data, there is no personal data to retain. Any anonymous, aggregated analytics data is retained only as long as necessary for analytical purposes and is not associated with any identifiable individual.</p>
+</div>
+
+<div class="section">
+<h2><span class="dot"></span> 9. Your Rights</h2>
+<p>Depending on your jurisdiction, you may have the following rights regarding your data:</p>
+<ul>
+<li><strong>Right to Access:</strong> Request information about any data we may hold about you.</li>
+<li><strong>Right to Deletion:</strong> Request that we delete any data associated with you.</li>
+<li><strong>Right to Opt-Out:</strong> Opt out of analytics and cookie tracking through your browser settings.</li>
+</ul>
+<p>To exercise these rights, please contact us at <strong>contact@movorastar.live</strong>. Since we collect minimal data, fulfilling such requests is typically straightforward.</p>
+</div>
+
+<div class="section">
+<h2><span class="dot"></span> 10. Children's Privacy</h2>
+<p>Our Website is not directed at children under the age of 13 (or the applicable age of consent in your jurisdiction). We do not knowingly collect any personal information from children. If you believe a child has provided us with personal data, please contact us immediately, and we will take steps to delete such information.</p>
+</div>
+
+<div class="section">
+<h2><span class="dot"></span> 11. International Users</h2>
+<p>Our Website is accessible from various countries worldwide. By using our Website, you acknowledge that your information may be processed in countries where our servers or third-party service providers are located. We take reasonable steps to ensure your privacy is protected regardless of jurisdiction.</p>
+</div>
+
+<div class="section">
+<h2><span class="dot"></span> 12. Changes to This Policy</h2>
+<p>We reserve the right to update or modify this Privacy Policy at any time. Changes will be effective immediately upon posting to the Website. We encourage you to review this Privacy Policy periodically. Your continued use of the Website after any modifications indicates your acceptance of the updated policy.</p>
+</div>
+
+<div class="section">
+<h2><span class="dot"></span> 13. Contact Information</h2>
+<p>If you have any questions, concerns, or requests regarding this Privacy Policy, please contact us:</p>
+<p><strong>Email:</strong> contact@movorastar.live</p>
+</div>
+</div>
+</main>
+
+<footer>
+<div class="footer-grid">
+<div class="footer-col">
+<p class="footer-label">Brand</p>
+<div class="footer-logo"><span class="star">★</span> MovoraStar</div>
+<p class="footer-tagline">Your cinematic streaming gateway</p>
+</div>
+<div class="footer-col">
+<p class="footer-label">Links</p>
+<div class="footer-links">
+<a href="/privacy">Privacy Policy</a>
+<a href="/terms">Terms of Use</a>
+<a href="/disclaimer">Disclaimer</a>
+<a href="/dmca">DMCA Policy</a>
+<a href="/cookies">Cookies Policy</a>
+</div>
+</div>
+<div class="footer-col">
+<p class="footer-label">Creator</p>
+<p class="footer-credit">Founded &amp; developed by<br><a href="/about">MOHAMED SAMI</a><span class="role">Founder &amp; Developer</span></p>
+</div>
+</div>
+<hr class="footer-divider">
+<div class="footer-bottom">
+<p class="footer-copy">&copy; <script>document.write(new Date().getFullYear())</script> MovoraStar. All rights reserved.</p><span class="footer-version">v1.0.0</span>
+</div>
+</footer>
+
+<script src="/js/i18n.js"></script>
+<script src="/components/navbar.js"></script>
+</body>
+</html>
